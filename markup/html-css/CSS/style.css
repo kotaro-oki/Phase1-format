@@ -78,6 +78,53 @@ header {
     background-size:cover;
 }
 
+.first-v-wrap{
+    padding:285px 0 255px;
+    /* ブロック要素を中央揃え */
+    margin:0 auto;
+    width:250px;
+    text-align: center;
+}
+
+.first-v-title {
+    margin-bottom:150px;
+    /* 文字を太文字に */
+    font-weight:bold;
+    font-size: 27px;
+}
+
+.first-v-title::after {
+    display:block;
+    content:"";
+    width:100px;
+    margin:20px auto 0; 
+    /* 線を作る */
+    border-top:1px solid #FFF;
+}
+
+.first-v-btn {
+    width:200px;
+    height:50px;
+    text-align: center;
+    font-weight: bold;
+    /* 枠線を消す */
+    border:none;
+    /* 要素の枠を丸くする */
+    border-radius: 5px;
+    /* -90degで左から右にグラデーションする */
+    background: linear-gradient(-90deg,#283C86,#06BEB6);
+    /* 要素に影をつける */
+    box-shadow:0px 5px #070707;
+    font-weight:bold;
+    font-size:15px;
+    color:#FFF;
+}
+
+
+.fa-door-open {
+    padding-right:4px;
+}
+
 
 footer{
     height: 50px;
