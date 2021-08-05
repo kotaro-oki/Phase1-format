@@ -73,7 +73,7 @@ header {
 #first-v{
     height:770px;
     /* 背景画像を挿入 */
-    background-image:url("../img/bg1.png") ;
+    background-image:url("../img/bg1.png");
     /* 画面全体に画像が表示されるように */
     background-size:cover;
 }
