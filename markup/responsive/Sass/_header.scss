@@ -1,0 +1,31 @@
+header{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+    color:#fff;
+    // first-vの基準の相対値を指定できるように
+    position:absolute;
+    // 一番上に表示させる
+    z-index:20;
+
+    ul{
+        display:flex;
+        justify-content: space-between;
+    }
+    nav{
+    width:45%;
+    ul{
+        // リストの要素を横並びに
+        display:flex;
+        // リストの要素を均等に配置
+        justify-content: space-between;
+        font-size:1.5rem;
+    }
+}
+}
+
+.ham{
+    // 要素を非表示に
+    display: none;
+}

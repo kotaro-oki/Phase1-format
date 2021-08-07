@@ -1,0 +1,79 @@
+#concept{
+    overflow: hidden;
+    background: linear-gradient(0deg, #A1938689 0%, #A1938689 60%, #A193861F 60%,  #A193861F 100%);
+    .concept-inner{
+        margin: 0 auto;
+        width: 1075px;
+        padding-top: 250px;
+        @include tab{
+            padding-top: 6rem;
+            
+            width: 90%;
+        }
+        .caption{
+            @include caption;
+            font-size: 1.8rem;
+            padding-bottom: 5rem;
+            &::after{
+                @include caption-border;
+                width:5rem;
+            }
+        }
+        .concept-images{
+            @include tab{
+                display: flex;
+                justify-content: space-between;
+            }
+            // .concept-images-a{
+            //     @include tab{
+            //         width: 48%;
+            //         height: auto;
+            //         overflow: hidden;
+            //     }
+            //     img{
+            //         @include tab{
+            //             width: 48%;
+            //         }
+            //     }
+            // }
+            // .concept-images-a{
+            //     @include tab{
+            //         width: 48%;
+            //         height: auto;
+            //         overflow: hidden;
+            //     }
+            // }
+        }
+        .concept-texts{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            @include tab{
+                display: block;
+            }
+            .concept-a{
+                padding: 10rem 5rem;
+                font-size: 42px;
+                letter-spacing: 7.2px;
+                @include tab{
+                    font-size: 1.8rem;
+                    padding: 6rem 2rem;
+                    text-align: center;
+                }
+            }
+            .concept-b{
+                width: 422px;
+                overflow-wrap:break-word;
+                font-size: 16px;
+                letter-spacing: 1.6px;
+                @include tab{
+                    font-size: 1.4rem;
+                    width: 100%;
+                    margin-bottom: 6.3rem;
+                }
+            }
+        }
+    }
+}
+

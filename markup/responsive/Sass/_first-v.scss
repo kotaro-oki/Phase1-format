@@ -1,0 +1,64 @@
+#first-v{
+    background-image:URL("../img/bg1.jpg");
+    // 要素全体に画像を表示
+    background-size:cover;
+    width:100%;
+    // 画面サイズと同じ大きさ
+    height:100vh;
+    // first-v__wrapの基準になる
+    position:relative;
+    color:#fff;
+}
+
+.first-v__wrap{
+    width:250px;
+    height:230px;
+    display:flex;
+    justify-content: space-between;
+    // 要素を縦並びに
+    flex-direction: column;
+    // #first-vを基準とする
+    position:absolute;
+    // 基準の上から50%の位置
+    top:50%;
+    // 基準の左から50%の位置
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:30%;
+    text-align:center;
+
+}
+
+.catch{
+    color:#fff;
+    font-size: 2.7rem;
+    font-weight: bold;
+
+     &::after{
+        display: block;
+        // 97px=9.7rem
+        width:9.7rem;
+        content:"";
+        border-bottom: 1px solid #fff;
+        // 20px= 2rem
+        margin:2rem auto 0;
+     }
+}
+
+.fv-btn{
+    width:200px;
+    height:50px;
+    // 右から左にグラデーション
+    background:linear-gradient(to right, $sky, $navy);
+    color:#fff;
+    // borderを消す
+    border:none;
+    // 要素の角を丸くする
+    border-radius:5px;
+    // 要素に影をつける
+    box-shadow:0 5px #070707;
+
+    .btn-icon{
+        margin-right:4px;
+    }
+}

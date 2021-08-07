@@ -1,0 +1,72 @@
+/* 共通部分 */
+$caption:#707070;
+
+$inner-width: 1075px;
+
+html{
+    font-size: 62.5%; //10px=1remになる
+}
+
+body{
+    
+    font-size:12px;
+    line-height:1.67;
+    font-family: Roboto Mono for Powerline;
+}
+
+main{
+    z-index: 10;
+}
+
+
+/* mixin */
+// PC画面サイズ以上
+@mixin pc {
+    @media (min-width:1025px){
+        @content;
+    }
+}
+
+// タブレット画面
+@mixin tab {
+    @media (max-width:1024px){
+        @content;
+    }
+}
+
+// スマホ画面
+@mixin sp {
+    @media (max-width:599px){
+        @content;
+    }
+}
+
+
+
+
+
+
+
+@mixin caption{
+    color: $caption;
+    letter-spacing: 5.4px;
+    line-height: 24px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+@mixin caption-border{
+    margin-left: 2rem;
+    display:inline-block;
+    content:"";
+    width:10rem;
+    border-top:1px solid $caption;
+    margin-right:2rem;
+}
+
+// .inner{
+//     @include tab{
+//         width: 335px;
+//     }
+// }

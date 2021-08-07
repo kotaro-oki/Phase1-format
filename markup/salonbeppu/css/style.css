@@ -1,0 +1,554 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+a:visited {
+  color: inherti;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+/* 共通部分 */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 12px;
+  line-height: 1.67;
+  font-family: Roboto Mono for Powerline;
+}
+
+main {
+  z-index: 10;
+}
+
+/* mixin */
+header {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  padding-left: 78px;
+  padding-top: 80px;
+  position: absolute;
+  z-index: 20;
+}
+
+@media (max-width: 1024px) {
+  header {
+    justify-content: space-between;
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    padding: 0;
+    padding: 2.4rem 2rem;
+  }
+}
+
+header .header-inner {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  header .header-inner {
+    justify-content: space-between;
+  }
+}
+
+header .header-inner .title {
+  letter-spacing: 3.8px;
+  padding-right: 20px;
+  line-height: 3.8rem;
+  font-size: 3.8rem;
+}
+
+@media (max-width: 1024px) {
+  header .header-inner .title {
+    font-size: 2.2rem;
+  }
+}
+
+header .header-inner .ham {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  header .header-inner .ham {
+    display: flex;
+    width: 25px;
+    height: 14px;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  header .header-inner .ham span {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #707070;
+  }
+}
+
+header .header-inner nav {
+  color: #707070;
+  width: 38rem;
+}
+
+@media (max-width: 1024px) {
+  header .header-inner nav {
+    display: none;
+  }
+}
+
+header .header-inner nav ul {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  letter-spacing: 1.8px;
+  line-height: 18px;
+}
+
+header .header-inner nav ul li::after {
+  display: block;
+  content: "";
+  width: 6rem;
+  border-top: #707070 solid 1px;
+}
+
+.top-inner {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .top-inner {
+    position: relative;
+  }
+}
+
+.top-inner .top-left {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-inner .top-left .top-contents {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .top-inner .top-left .top-contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    margin: auto;
+    color: white;
+  }
+}
+
+.top-inner .top-left .top-contents .top-a {
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .top-inner .top-left .top-contents .top-a {
+    font-size: 2.3rem;
+    order: 2;
+  }
+}
+
+.top-inner .top-left .top-contents .top-b {
+  white-space: nowrap;
+  font-size: 3.8rem;
+  line-height: 12.8rem;
+  letter-spacing: 3.8px;
+}
+
+@media (max-width: 1024px) {
+  .top-inner .top-left .top-contents .top-b {
+    font-size: 3rem;
+    order: 1;
+  }
+}
+
+.top-inner .top-right img {
+  user-select: none;
+  flex: 1;
+}
+
+#concept {
+  overflow: hidden;
+  background: linear-gradient(0deg, #A1938689 0%, #A1938689 60%, #A193861F 60%, #A193861F 100%);
+}
+
+#concept .concept-inner {
+  margin: 0 auto;
+  width: 1075px;
+  padding-top: 250px;
+}
+
+@media (max-width: 1024px) {
+  #concept .concept-inner {
+    padding-top: 6rem;
+    width: 90%;
+  }
+}
+
+#concept .concept-inner .caption {
+  color: #707070;
+  letter-spacing: 5.4px;
+  line-height: 24px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  padding-bottom: 5rem;
+}
+
+#concept .concept-inner .caption::after {
+  margin-left: 2rem;
+  display: inline-block;
+  content: "";
+  width: 10rem;
+  border-top: 1px solid #707070;
+  margin-right: 2rem;
+  width: 5rem;
+}
+
+@media (max-width: 1024px) {
+  #concept .concept-inner .concept-images {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+#concept .concept-inner .concept-texts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  #concept .concept-inner .concept-texts {
+    display: block;
+  }
+}
+
+#concept .concept-inner .concept-texts .concept-a {
+  padding: 10rem 5rem;
+  font-size: 42px;
+  letter-spacing: 7.2px;
+}
+
+@media (max-width: 1024px) {
+  #concept .concept-inner .concept-texts .concept-a {
+    font-size: 1.8rem;
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+}
+
+#concept .concept-inner .concept-texts .concept-b {
+  width: 422px;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+}
+
+@media (max-width: 1024px) {
+  #concept .concept-inner .concept-texts .concept-b {
+    font-size: 1.4rem;
+    width: 100%;
+    margin-bottom: 6.3rem;
+  }
+}
+
+#menu {
+  overflow: hidden;
+  background-color: white;
+}
+
+#menu .menu-inner {
+  width: 1075px;
+  margin: 0 auto;
+  padding-top: 250px;
+}
+
+#menu .menu-inner .caption {
+  color: #707070;
+  letter-spacing: 5.4px;
+  line-height: 24px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+#menu .menu-inner .caption::after {
+  margin-left: 2rem;
+  display: inline-block;
+  content: "";
+  width: 10rem;
+  border-top: 1px solid #707070;
+  margin-right: 2rem;
+}
+
+#menu .menu-inner .menus {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#menu .menu-inner .menus .menubox {
+  text-align: center;
+}
+
+#menu .menu-inner .menus .menubox-a {
+  font-size: 30px;
+  padding: 3rem 0;
+}
+
+#menu .menu-inner .menus .menubox-b {
+  width: 253px;
+  font-size: 1.3rem;
+  overflow-wrap: break-word;
+  letter-spacing: 1.6px;
+  text-align: left;
+  margin: 0 auto 3rem;
+}
+
+#menu .menu-inner .menus .menubox-c {
+  width: 270px;
+  text-align: right;
+  font-size: 1.3rem;
+}
+
+#access {
+  overflow: hidden;
+  background-color: #A193861F;
+  padding-bottom: 7rem;
+  padding-top: 250px;
+}
+
+#access .access-inner .caption-box {
+  display: flex;
+  justify-content: center;
+}
+
+#access .access-inner .caption-box .caption {
+  width: 1075px;
+  margin: 0;
+  color: #707070;
+  letter-spacing: 5.4px;
+  line-height: 24px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+}
+
+#access .access-inner .caption-box .caption::after {
+  margin-left: 2rem;
+  display: inline-block;
+  content: "";
+  width: 10rem;
+  border-top: 1px solid #707070;
+  margin-right: 2rem;
+}
+
+#access .access-inner .access-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+#access .access-inner .access-box .access-content {
+  background-color: #D0C5BA;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#access .access-inner .access-box .access-content h2 {
+  color: #00000038;
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+#access .access-inner .access-box .access-content p {
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: white;
+}
+
+footer {
+  overflow: hidden;
+  background-color: white;
+}
+
+footer .footer-inner {
+  padding-top: 200px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  width: 1075px;
+}
+
+footer .footer-inner .footer-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 100px;
+  border-top: solid 1px #7070704D;
+}
+
+footer .footer-inner .footer-contents .footer-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer-inner .footer-contents .footer-title p {
+  font-size: 32px;
+  color: #7070704D;
+  margin-right: 20px;
+  letter-spacing: 3.2px;
+}
+
+footer .footer-inner .footer-contents .footer-title i {
+  margin-right: 2rem;
+}
+
+footer .footer-inner .footer-contents .reserve-title {
+  font-family: 'Roboto Mono for Powerline';
+  line-height: 18px;
+  padding: 1rem 4rem;
+  border: solid #707070 1px;
+  letter-spacing: 1.8px;
+  cursor: pointer;
+}
+
+footer .footer-inner .footer-contents::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #0097A7;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+/*# sourceMappingURL=style.css.map */

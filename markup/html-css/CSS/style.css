@@ -28,28 +28,17 @@ body{
 }
 
 /* header */
-header {
+header{
     width:100%;
     display:flex;
-    /* 子要素を親要素の両端に配置 */
-    justify-content:space-between;
+    justify-content: space-between;
     padding:0 20px;
     color:#fff;
-    /* 背景色をblackにして綺麗に表示されていたらblackをinheritに変更 */
-    background-color:black;
-
-}
-
-header {
-    width:100%;
-    display:flex;
-    /* 子要素を親要素の両端に配置 */
-    justify-content:space-between;
-    padding:0 20px;
-    color:#fff;
-    /* 背景色をblackにして綺麗に表示されていたらblackをinheritに変更 */
-    background-color:black;
-
+    background-color:inherit;
+    /* first-vに合わせる */
+    position:absolute;
+    /* headerが一番上に来るようにする */
+    z-index:10;
 }
 
 .header-logo {
@@ -72,10 +61,10 @@ header {
 
 #first-v{
     height:770px;
-    /* 背景画像を挿入 */
-    background-image:url("../img/bg1.png");
-    /* 画面全体に画像が表示されるように */
+    background-image:URL("../img/bg1.png");
     background-size:cover;
+    color:#fff;
+    position:relative;
 }
 
 .first-v-wrap{
@@ -124,6 +113,272 @@ header {
 .fa-door-open {
     padding-right:4px;
 }
+
+.inner{
+    /* about-itemの横幅と間隔の合計 */
+    width:1100px;
+    /* titleまでの幅 */
+    padding:90px 0;
+    /* innderが画面の中央に */
+    margin:0 auto;
+}
+
+/*共通パート*/
+.title {
+    font-size: 18px;
+    /* 文字をイタリック体にイタリック体 */
+    font-style:italic;
+}
+
+.title-b{
+    /* Aboutの部分だけを太文字に */
+    font-weight: bold;
+}
+
+.title::before{
+    /* インラインブロック要素にすることでpaddingなどを設定できるようになる */
+    /* 擬似要素には必ずつける */
+    content:"";
+    display:inline-block;
+    width:30px;
+    margin-right:20px;
+    border-top:1px solid #191919;
+}
+
+.title::after {
+    /* 擬似要素には必ずつける */
+    content:"";
+    display:inline-block;
+    width:30px;
+    margin-left:20px;
+    border-top:1px solid #191919;
+    content:"";
+}
+
+.title{
+    /* 擬似要素とtitleを横並びに */
+    display:flex;
+    padding-bottom:60px;
+    /* 要素全体を横方向に中央揃え */
+    justify-content: center;
+    /* 線を文字の縦方向に中央揃え */
+    align-items: center;
+    font-style:italic;
+    font-size: 18px;
+    text-align:center;
+}
+
+/* aboutのスタイル */
+#about{
+    color:#191919;
+    background-color:#F8F8F8;
+}
+
+.about-wrap{
+    /* 子要素を横並びに */
+    display:flex;
+    justify-content: space-between;
+    /* 横幅が親要素を超える時に子要素を次の段に移す */
+    flex-wrap: wrap;
+    margin-top:60px;
+}
+
+.about-item{
+    width:300px;
+    height:315px;
+    padding:35px 50px 50px;
+    text-align: center;
+    background-color:#FFF;
+}
+
+.about-item:nth-child(n+4):nth-child(-n+6){
+    /* 4~6個目のabout-itemにmarginをつける */
+    margin-top:47px;
+}
+
+.about-title__title{
+    font-size: 22px;
+}
+
+.about-item__img img{
+    width:122px;
+    height:122px;
+    margin:20px 0 25px;
+}
+
+.about-item__desc{
+    font-size: 13px;
+}   
+
+#news{
+    background-image:url("../img/bg2.png");
+    background-size: cover;
+}
+
+.title-white{
+    color: white;
+}
+
+.title-white::before{
+    border-top:1px solid white;
+}
+
+.title-white::after {
+    border-top:1px solid white;
+}
+
+.news-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-item{
+    width: 336px;
+    height: 400px;
+    background-color: white;
+}
+
+
+.news-item__img img{
+    width:336px;
+    height: 227px;  
+
+}
+
+.news-content{
+    padding: 18px;
+}
+
+
+.news-title__date{
+    font-size: 10px; 
+}
+
+.news-title__title{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.news-item__desc{
+    font-size: 12px;
+}
+
+
+
+/* entryのスタイル */
+#entry {
+    background-color: #FFF;
+}
+
+.entry-wrap {
+    padding:175px 0;
+    width:400px;
+    /* 横方向に中央揃えに */
+    margin:0 auto;
+    /* 文字を中央揃えに */
+    text-align: center;
+}
+
+.entry-title {
+    /* 横方向に中央揃え */
+    margin-bottom:55px;
+    font-weight:bold;
+    font-size:18px;
+    color:#191919;
+}
+
+.entry-btn{
+    /* entryセクションのボタン幅に変更 */
+    width:320px;
+}
+
+
+#contact{
+    background-image: url("../img/bg3.png");
+    /* 画像が真ん中に表示される */
+    background-size: cover;
+    color:#fff;
+}
+
+.contact-wrap{
+    width:600px;
+    margin:0 auto;
+}
+
+/* titleクラスとその擬似要素の色を変える */
+#contact .title::before,#contact .title::after{
+    border-color:#fff;
+}
+
+.contact-caution{
+    margin:60px 0 25px;
+}
+
+.contact-box{
+    margin-bottom:33px;
+}
+
+.contact-text{
+    margin-bottom:10px;
+    font-size: 15px;
+}
+
+input,textarea,select{
+    width:100%;
+    border-radius: 7px;
+}
+
+select{
+    /* デフォルトでついている矢印アイコンを消す */
+    appearance: none;
+}
+
+.contact-box:nth-of-type(3){
+    position:relative;
+}
+
+.contact-box:nth-of-type(3)::after{
+    position:absolute;
+    background:url("../img/arrow.png");
+    background-size:100%;
+    display:block;
+    content:"";
+    width:15px;
+    height:15px;
+    top:60%;
+    right:15px;
+}
+
+input,select,textarea{
+    width:100%;
+    border-radius:7px;
+    /* placeholderに余白をつける */
+    padding:15px;
+}
+
+textarea{
+    height:185px;
+}
+
+.contact-box:nth-of-type(4){
+    margin-bottom:0px;
+}
+
+.red{
+    color:red;
+    margin-left:8px;
+}
+
+.caution-red{
+    margin-left:0;
+    margin-right:8px;
+}
+
+
+
+
+
+
 
 
 footer{

@@ -1,0 +1,50 @@
+footer{
+    overflow: hidden;
+    background-color: white;
+    .footer-inner{
+        padding-top: 200px;
+        padding-bottom: 50px;
+        margin: 0 auto;
+        width: $inner-width;
+        .footer-contents{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-top: 100px;
+            border-top: solid 1px #7070704D;
+            .footer-title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center; 
+                p{
+                    font-size: 32px;
+                    color: #7070704D;
+                    margin-right: 20px;
+                    letter-spacing: 3.2px;
+                }
+                i{
+                    // width: 2rem;
+                    margin-right: 2rem;
+                }
+            }
+            .reserve-title{
+                font-family: 'Roboto Mono for Powerline';
+                line-height: 18px;
+                padding: 1rem 4rem;
+                border: solid #707070 1px;
+                letter-spacing: 1.8px;
+                cursor: pointer;
+            }
+            &::before{
+                content:"";
+                display:block;
+                width:80px;
+                height:3px;
+                background-color:#0097A7;
+                position:absolute;
+                top:0;
+                left:10px;
+            }
+        }
+    }
+}
