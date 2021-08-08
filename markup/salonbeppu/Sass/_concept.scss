@@ -11,38 +11,35 @@
             width: 90%;
         }
         .caption{
+            margin-bottom: 1rem;
             @include caption;
-            font-size: 1.8rem;
-            padding-bottom: 5rem;
+            @include tab{
+                font-size: 1.8rem;
+                padding-bottom: 5rem;
+            }
+
             &::after{
                 @include caption-border;
-                width:5rem;
+                @include tab{
+                    width:5rem;
+                }
             }
         }
         .concept-images{
             @include tab{
-                display: flex;
-                justify-content: space-between;
+                .image-a{
+                    width: 164px;
+                    height: 205px;
+                }
+                .image-b{
+                    width: 164px;
+                    height: 205px;
+                }
+                img{
+                    object-fit: cover;
+                    object-position: right;
+                }
             }
-            // .concept-images-a{
-            //     @include tab{
-            //         width: 48%;
-            //         height: auto;
-            //         overflow: hidden;
-            //     }
-            //     img{
-            //         @include tab{
-            //             width: 48%;
-            //         }
-            //     }
-            // }
-            // .concept-images-a{
-            //     @include tab{
-            //         width: 48%;
-            //         height: auto;
-            //         overflow: hidden;
-            //     }
-            // }
         }
         .concept-texts{
             display: flex;

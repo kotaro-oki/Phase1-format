@@ -5,10 +5,23 @@
         width: $inner-width;
         margin: 0 auto;
         padding-top: 250px;
+        @include tab{
+            padding-top: 6rem;
+            width: 90%;
+        }
         .caption{
+            margin-bottom: 1rem;
             @include caption;
+            @include tab{
+                font-size: 1.8rem;
+                padding-bottom: 5rem;
+            }
+
             &::after{
                 @include caption-border;
+                @include tab{
+                    width:5rem;
+                }
             }
         }
         
@@ -17,12 +30,19 @@
             margin-bottom: 4rem;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+            @include tab{
+                justify-content: center;
+            }
             .menubox{
                 text-align: center;
                 
                 &-a{
                     font-size: 30px;
                     padding: 3rem 0;
+                    @include tab{
+                        text-align: left;
+                    }
                 }
                 &-b{
                     width: 253px;
@@ -37,6 +57,9 @@
                     width: 270px;
                     text-align: right;
                     font-size: 1.3rem;
+                    @include tab{
+                        margin-bottom: 6rem;
+                    }
                 }
             }
         }

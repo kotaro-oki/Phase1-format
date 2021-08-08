@@ -6,26 +6,51 @@ footer{
         padding-bottom: 50px;
         margin: 0 auto;
         width: $inner-width;
+        @include tab{
+            width: 90%;
+            padding-top: 8rem;
+            padding-bottom: 2rem;
+        }
         .footer-contents{
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
             padding-top: 100px;
             border-top: solid 1px #7070704D;
+            @include tab{
+                padding-top: 8rem;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
             .footer-title{
                 display: flex;
                 justify-content: space-between;
+                width: 100%;
                 align-items: center; 
+                @include tab{
+                    order: 1;
+                }
                 p{
                     font-size: 32px;
                     color: #7070704D;
                     margin-right: 20px;
                     letter-spacing: 3.2px;
+                    @include tab{
+                        font-size: 1.8rem;
+                    }
                 }
-                i{
-                    // width: 2rem;
-                    margin-right: 2rem;
+                .icons{
+                    i{
+                        // width: 2rem;
+                        margin-right: 2rem;
+                        @include tab{
+                            margin-right: 0;
+                            margin-left: 1rem;
+                        }
+                    }
                 }
+
             }
             .reserve-title{
                 font-family: 'Roboto Mono for Powerline';
@@ -34,6 +59,12 @@ footer{
                 border: solid #707070 1px;
                 letter-spacing: 1.8px;
                 cursor: pointer;
+                user-select: none;
+                @include tab{
+                    margin-bottom: 6rem;
+                    font-size: 1.4rem;
+                    order: 3;
+                }
             }
             &::before{
                 content:"";
